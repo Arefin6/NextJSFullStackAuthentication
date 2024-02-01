@@ -1,33 +1,35 @@
+/* Import Tailwind CSS utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* Set color variables for light mode */
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* Dark mode styles based on user preference */
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
 
+/* Global styling */
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom right, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
 }
 
+/* Custom utility class */
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+    /* Add your custom utility styles here */
+    /* For example: */
+    font-weight: bold;
+    font-size: 1.2rem;
+    /* ... */
   }
 }
