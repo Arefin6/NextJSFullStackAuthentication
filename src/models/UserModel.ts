@@ -40,4 +40,4 @@ const userSchema = new mongoose.Schema<IUser>({
  verifyToken:String,
  verifyTokenExpire:Date
 })
-export const user = mongoose.model('user',userSchema);
+export const User = mongoose.model('user',userSchema);
